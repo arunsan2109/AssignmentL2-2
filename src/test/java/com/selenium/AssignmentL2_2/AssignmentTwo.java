@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,8 +33,10 @@ public class AssignmentTwo {
 	@BeforeTest
 	public void launchURL() {
 		// Step1: Launch URL with Edge Browser
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+/*		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();*/
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		driver.get(url);
 	}
 
